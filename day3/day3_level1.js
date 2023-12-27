@@ -198,11 +198,11 @@ function ymd(date) {
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
 
-    const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}`;
-    return formattedDate;
+    const ans = `${year}-${month}-${day} ${hours}:${minutes}`;
+    return ans;
 }
 
 const currentDate = new Date();
-const formattedDate = ymd(currentDate);
+const ans = ymd(currentDate);
 
-console.log('YYY-MM-DD HH:mm:', formattedDate);
+console.log('YYY-MM-DD HH:mm:', ans);
