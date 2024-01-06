@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
 ages.sort();
 
@@ -56,4 +57,64 @@ if (Number.isInteger(total_nu / 2)) {
 else {
     list1 = countriesq2.slice(0, (Math.floor(top_ten / 2)) + 1);
     list2 = countriesq2.slice(top_ten / 2 + 1, countriesq2.length);
+=======
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+
+const minval = Math.min(...ages);
+const maxval = Math.max(...ages);
+console.log(minval);
+console.log(maxval);
+
+//q2
+let sum_ages = 0;
+ages.forEach(element => {
+    sum_ages = sum_ages + element;
+});
+
+console.log(`average of ages are: ${sum_ages / (ages.length)}`);
+
+
+const min_Diff = Math.abs(minval - sum_ages / (ages.length));
+const max_Diff = Math.abs(maxval - sum_ages / (ages.length));
+console.log(min_Diff);
+
+if (min_Diff > max_Diff) {
+    console.log(" (min - average) is greater.");
+} else if (min_Diff < max_Diff) {
+    console.log(" (max - average) is greater.");
+} else {
+    console.log("Absolute differences are equal.");
+}
+
+
+//q2
+const countriesq2 = require('./question5_countrylist');
+const top_ten = countriesq2.slice(0, 10);
+console.log(top_ten);
+//q3
+const middle_ind = Math.floor(countriesq2.length / 2);
+console.log(countriesq2[middle_ind]);
+
+//q4
+const total_nu = countriesq2.length;
+// console.log(Math.floor(total_nu / 2));
+
+const list1 = [];
+const list2 = [];
+
+if (Number.isInteger(total_nu / 2)) {
+    if (total_nu / 2 % 2 == 0) {
+        list1 = countriesq2.slice(0, top_ten / 2);
+        list2 = countriesq2.slice(top_ten / 2, countriesq2.length);
+    }
+    else {
+        list1 = countriesq2.slice(0, (top_ten / 2) + 1);
+        list2 = countriesq2.slice(top_ten / 2 + 1, countriesq2.length);
+    }
+}
+else {
+    list1 = countriesq2.slice(0, (Math.floor(top_ten / 2)) + 1);
+    list2 = countriesq2.slice(top_ten / 2 + 1, countriesq2.length);
+>>>>>>> 05053a4ca6c1361e557f420b8632f8a5adfbb769
 }
