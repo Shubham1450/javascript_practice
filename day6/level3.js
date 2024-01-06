@@ -46,4 +46,4 @@ for (let i = countries.length - 1; i >= 0; i--) {
     let a = countries[i].toUpperCase();
     rev_new_list.push(a)
 }
-console.log(rev_new_list);
+console.log("re:", +rev_new_list);
